@@ -30,7 +30,20 @@ function handleSub2(event) {
   addToTeam2--
   const team2Score = document.querySelector('.team2 h3')
   team2Score.textContent = `${addToTeam2}`
-  // console.log(team2Score)
+}
+
+function input1(event) {
+  const typing = event.target.value
+  const inputValue = document.querySelector('input')
+  const name = document.querySelector('.team1 h2')
+  name.textContent = typing
+}
+
+function input2(event) {
+  const typing2 = event.target.value
+  const inputValue2 = document.querySelector('input')
+  const name2 = document.querySelector('.team2 h2')
+  name2.textContent = typing2
 }
 
 function main() {
@@ -45,6 +58,12 @@ function main() {
 
   const sub2 = document.querySelector('.two.subtract')
   sub2.addEventListener('click', handleSub2)
+
+  const newName = document.querySelector('.team1 input')
+  newName.addEventListener('input', input1)
+
+  const newName2 = document.querySelector('.team2 input')
+  newName2.addEventListener('input', input2)
 }
 
 document.addEventListener('DOMContentLoaded', main)
