@@ -1,17 +1,15 @@
 let addToTeam1 = 0
 let addToTeam2 = 0
 
+// Add to Team 1
 function handleClick1(event) {
   const buttonClicked = event.target
-
   addToTeam1++
   const team1Score = document.querySelector('.team1 h3')
   team1Score.textContent = `${addToTeam1}`
-  // console.log(addToTeam1)
-
-  // console.log(team1Score)
 }
 
+// Add to Team 2
 function handleClick2(event) {
   const buttonClicked = event.target
   addToTeam2++
@@ -19,12 +17,15 @@ function handleClick2(event) {
   team2Score.textContent = `${addToTeam2}`
 }
 
+// Subtract from Team 1
 function handleSub1(event) {
   const buttonClicked = event.target
   addToTeam1--
   const team1Score = document.querySelector('.team1 h3')
   team1Score.textContent = `${addToTeam1}`
 }
+
+// Subtract from Team 2
 function handleSub2(event) {
   const buttonClicked = event.target
   addToTeam2--
@@ -32,6 +33,7 @@ function handleSub2(event) {
   team2Score.textContent = `${addToTeam2}`
 }
 
+// Update Team 1 Name
 function input1(event) {
   const typing = event.target.value
   const inputValue = document.querySelector('input')
@@ -39,6 +41,7 @@ function input1(event) {
   name.textContent = typing
 }
 
+// Update Team 2 Name
 function input2(event) {
   const typing2 = event.target.value
   const inputValue2 = document.querySelector('input')
