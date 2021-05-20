@@ -67,3 +67,6 @@ fieldset i.add {
 fieldset i.subtract {
   color: #f64545;
 }
+fieldset i.add.taken {
+  cursor: not-allowed;
+}

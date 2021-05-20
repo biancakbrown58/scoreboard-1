@@ -4,17 +4,24 @@ let addToTeam2 = 0
 // Add to Team 1
 function handleClick1(event) {
   const buttonClicked = event.target
-  addToTeam1++
   const team1Score = document.querySelector('.team1 h3')
+  addToTeam1++
   team1Score.textContent = `${addToTeam1}`
+  if (addToTeam1 === 21) {
+    buttonClicked.classList.add('taken')
+    return
+  }
 }
 
 // Add to Team 2
 function handleClick2(event) {
   const buttonClicked = event.target
-  addToTeam2++
   const team2Score = document.querySelector('.team2 h3')
+  addToTeam2++
   team2Score.textContent = `${addToTeam2}`
+  if (addToTeam2 === 21) {
+    buttonClicked.classList.add('taken')
+  }
 }
 
 // Subtract from Team 1
